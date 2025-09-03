@@ -21,7 +21,7 @@ resource "aws_security_group" "allow_ssh_a" {
 
 resource "aws_instance" "ec2-vpc-a" {
   ami               = local.ami
-  instance_type     = "t3.micro"
+  instance_type     = "t3.large"
   availability_zone = local.azs[0]
   key_name          = "tf-key-pair"
   subnet_id         = module.vpc-a.public_subnets[0]
